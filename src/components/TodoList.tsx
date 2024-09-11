@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 interface Todo {
   id: number;
   title: string;
-  completed: boolean;
+  body: string;
 }
 
 const TodoList = () => {
@@ -27,7 +27,7 @@ const TodoList = () => {
   return (
     <>
       {todos.map((todo) => (
-        <li key={todo.id}>{todo.title}</li>
+        <li key={todo.id}>{todo.title}, BODY:{todo.body}</li>
       ))}
     </>
   );

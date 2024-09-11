@@ -8,7 +8,7 @@ const TodoListWQueryHook = () => {
       {isLoading ? <p>Loading......</p> : null}
       {error ? <p>{error.message}:</p> : null}
       {todos?.map((todo) => (
-        <li key={todo.id}>{todo.title}</li>
+        <li key={todo.id}>{todo.title}, BODY: {todo.body}</li>
       ))}
     </>
   );

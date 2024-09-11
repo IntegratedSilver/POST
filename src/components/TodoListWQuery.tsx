@@ -4,7 +4,7 @@ import axios from "axios";
 interface Todo {
   id: number;
   title: string;
-  completed: boolean;
+  body: string;
 }
 
 const TodoListWQuery = () => {
@@ -24,7 +24,7 @@ const TodoListWQuery = () => {
     {isLoading ? <p>Loading......</p> :null}
     {error ? <p>{error.message}:</p> :null}
       {todos?.map((todo) => (
-        <li key={todo.id}>{todo.title}</li>
+        <li key={todo.id}>{todo.title} ,{todo.body}</li>
       ))}
     </>
   );
